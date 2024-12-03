@@ -1,12 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
+import Hero from "./components/Hero";
+import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <>
-      <p>hi</p>
-    </>
+    <ThemeProvider>
+      <LanguageProvider>
+        <Hero />
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
